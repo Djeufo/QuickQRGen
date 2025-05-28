@@ -2,22 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QR Code Generator</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <h2>QR Code Generator</h2>
-      <input
-        type="text"
-        id="linkInput"
-        placeholder="Enter a link (e.g., https://example.com)"
-      />
-      <br />
-      <button onclick="generateQR()">Generate QR Code</button>
-      <button id="download-btn" onclick="downloadQR()">Download</button>
-      <div id="qrcode"></div>
-    </div>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="./img/logo.png" alt="Logo" /></a>
+      </div>
+      <div class="title">QR Code Generator</div>
+      <a class="about" href="#about">About</a>
+    </header>
+
+    <main>
+      <div class="container">
+        <h2>Generate a QR Code</h2>
+        <input
+          type="text"
+          id="linkInput"
+          placeholder="Enter a link (e.g., https://example.com)"
+        />
+        <br />
+        <button onclick="generateQR()">Generate QR Code</button>
+        <button id="download-btn" onclick="downloadQR()">Download</button>
+        <div id="qrcode"></div>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2025 QR Code Generator. All rights reserved. Dr Djeufo
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
     <script src="./js/script.js"></script>

@@ -33,3 +33,12 @@ function downloadQR() {
   link.href = currentCanvas.toDataURL("image/png");
   link.click();
 }
+/**--------- 
+ 
+.container {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  margin: 2rem auto;
+*/
