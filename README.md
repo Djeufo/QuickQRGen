@@ -1,0 +1,2 @@
+# QuickQRGen
+Quick QR generator
