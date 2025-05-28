@@ -26,9 +26,17 @@
         <br />
         <button onclick="generateQR()">Generate QR Code</button>
         <button id="download-btn" onclick="downloadQR()">Download</button>
+        <button onclick="resetQR()">Reset</button>
         <div id="qrcode"></div>
       </div>
     </main>
+
+    <div id="popup" class="popup" onclick="outsideClick(event)">
+      <div class="popup-content">
+        <p id="popup-message"></p>
+        <button onclick="closePopup()">OK</button>
+      </div>
+    </div>
 
     <footer>
       &copy; <b>2025 QR Code Generator.</b> All rights reserved.
