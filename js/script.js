@@ -4,16 +4,20 @@ function generateQR() {
   const link = document.getElementById("linkInput").value.trim();
   const qrContainer = document.getElementById("qrcode");
   const downloadBtn = document.getElementById("download-btn");
+
   qrContainer.innerHTML = "";
   currentCanvas = null;
   downloadBtn.style.display = "none";
+
+  const screenWidth = window.innerWidth;
+  const size = screenWidth < 600 ? 200 : 300;
 
   if (!link) {
     alert("Please enter a valid link.");
     return;
   }
 
-  QRCode.toCanvas(link, { width: 256 }, (err, canvas) => {
+  QRCode.toCanvas(link, { width: size }, (err, canvas) => {
     if (err) {
       console.error(err);
       alert("Failed to generate QR code.");
@@ -33,12 +37,3 @@ function downloadQR() {
   link.href = currentCanvas.toDataURL("image/png");
   link.click();
 }
-/**--------- 
- 
-.container {
-  flex: 1;
-  padding: 2rem;
-  text-align: center;
-  background-color: white;
-  margin: 2rem auto;
-*/

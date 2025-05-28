@@ -84,10 +84,6 @@ button:hover {
   padding: 0;
 }
 
-#qrcode {
-  margin-top: 20px;
-}
-
 .container {
   padding: 2rem;
   text-align: center;
@@ -114,6 +110,15 @@ footer {
 
 #qrcode {
   margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#qrcode canvas,
+#qrcode img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*-------media---*/
