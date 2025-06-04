@@ -191,3 +191,15 @@ button:hover {
   height: auto;
   margin: 0 auto; /* This centers the container */
 }
+
+/*license text*/
+
+.license_text {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+}
+
+.license_text:hover {
+  text-decoration: underline; /* Or another effect like bold or color change */
+  color: #007acc; /* Optional hover color */
+}
