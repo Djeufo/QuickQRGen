@@ -19,8 +19,6 @@ header {
   color: white;
 }
 
-/*-------media---*/
-
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -29,6 +27,10 @@ header {
 
   .title {
     margin: 0.5rem 0;
+  }
+
+  .main-container {
+    width: 100%;
   }
 }
 
@@ -54,14 +56,58 @@ header {
   text-decoration: none;
 }
 
-/*-------body---*/
-main {
-  flex: 1;
+footer {
+  background-color: #2a2b2c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/**/
+.other-apps {
+  padding: 2rem;
+  background-color: #dae8ea;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.other-apps h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.app-links {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
+
+.app-links a {
+  padding: 0.75rem 1.5rem;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.app-links a:hover {
+  background-color: #074b1a;
+}
+
+.main-container {
+  width: 80%;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* style qr gen container*/
 
 input {
   width: 300px;
@@ -94,23 +140,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  padding: 2rem;
-  text-align: center;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  max-width: 600px;
-  width: 100%;
-  height: auto;
-}
-
 .popup {
   display: none;
   position: fixed;
@@ -134,16 +163,6 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/*-------footer---*/
-
-footer {
-  background-color: #2a2b2c;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
 #download-btn {
   display: none;
 }
@@ -159,4 +178,16 @@ footer {
 #qrcode img {
   max-width: 100%;
   height: auto;
+}
+
+.container-qr-gen {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);*/
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto; /* This centers the container */
 }
