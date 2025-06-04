@@ -8,12 +8,28 @@ body {
 
 /*-------header---*/
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* ensures it stays above other elements */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: #333;
   color: white;
+}
+
+/*-------media---*/
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title {
+    margin: 0.5rem 0;
+  }
 }
 
 .logo {
@@ -121,7 +137,8 @@ button:hover {
 /*-------footer---*/
 
 footer {
-  background-color: #f1f1f1;
+  background-color: #2a2b2c;
+  color: white;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
@@ -142,17 +159,4 @@ footer {
 #qrcode img {
   max-width: 100%;
   height: auto;
-}
-
-/*-------media---*/
-
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .title {
-    margin: 0.5rem 0;
-  }
 }
